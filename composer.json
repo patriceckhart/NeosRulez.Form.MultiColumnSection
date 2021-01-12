@@ -1,0 +1,18 @@
+{
+    "description": "Flow package with a custom Flow Form Framework Form Element that renders Multi columns",
+    "type": "neos-package",
+    "name": "neosrulez/form-multicolumnsection",
+    "require": {
+        "neos/form": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NeosRulez\\Form\\MultiColumnSection\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "NeosRulez.Form.MultiColumnSection"
+        }
+    }
+}

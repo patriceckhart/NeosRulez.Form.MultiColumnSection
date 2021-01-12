@@ -1,0 +1,37 @@
+prototype(Neos.Form.Builder:NodeBasedElementCollection) {
+    itemRenderer {
+        twoColumns {
+            @position = 'start'
+            condition = ${q(elementNode).is('[instanceof NeosRulez.Form.MultiColumnSection:TwoColumns]')}
+            renderer = Neos.Form.Builder:NodeBasedFormElement {
+                type = 'NeosRulez.Form.MultiColumnSection:TwoColumns.Definition'
+                element {
+                    column1Elements = Neos.Form.Builder:NodeBasedElementCollection {
+                        collection = ${q(elementNode).children('column1Elements').children()}
+                    }
+                    column2Elements = Neos.Form.Builder:NodeBasedElementCollection {
+                        collection = ${q(elementNode).children('column2Elements').children()}
+                    }
+                }
+            }
+        }
+        threeColumns {
+            @position = 'start'
+            condition = ${q(elementNode).is('[instanceof NeosRulez.Form.MultiColumnSection:ThreeColumns]')}
+            renderer = Neos.Form.Builder:NodeBasedFormElement {
+                type = 'NeosRulez.Form.MultiColumnSection:ThreeColumns.Definition'
+                element {
+                    column1Elements = Neos.Form.Builder:NodeBasedElementCollection {
+                        collection = ${q(elementNode).children('column1Elements').children()}
+                    }
+                    column2Elements = Neos.Form.Builder:NodeBasedElementCollection {
+                        collection = ${q(elementNode).children('column2Elements').children()}
+                    }
+                    column3Elements = Neos.Form.Builder:NodeBasedElementCollection {
+                        collection = ${q(elementNode).children('column3Elements').children()}
+                    }
+                }
+            }
+        }
+    }
+}
