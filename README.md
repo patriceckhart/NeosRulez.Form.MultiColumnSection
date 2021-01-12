@@ -1,4 +1,4 @@
-# Dynamic resources for Neos CMS
+# Multi columns in forms for Neos CMS
 
 A package for Neos CMS which render multi columns in form nodetypes.
 
